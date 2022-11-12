@@ -12,6 +12,7 @@ const classNames = {
   hasVal: 'hasValue',
   searchItem: 'searchItem',
 };
+const delegationEvents = ['click', 'focusin', 'focusout', 'input', 'mousedown'];
 
 class WCSearchInput extends ExtendedWC {
   state: {
@@ -171,7 +172,7 @@ class WCSearchInput extends ExtendedWC {
     this.attachShadow({ mode: 'open' });
     this.shadowRoot?.appendChild(template.content.cloneNode(true));
 
-    ['click', 'focusin', 'focusout', 'input', 'mousedown'].forEach((event) =>
+    delegationEvents.forEach((event) =>
       this.getEl(classNames.parent).addEventListener(event, this.handleEvents)
     );
   }
@@ -274,7 +275,7 @@ class WCSearchInput extends ExtendedWC {
   }
 
   disconnectedCallback() {
-    ['click', 'focusin', 'focusout', 'input'].forEach((event) =>
+    delegationEvents.forEach((event) =>
       this.getEl(classNames.parent).removeEventListener(
         event,
         this.handleEvents

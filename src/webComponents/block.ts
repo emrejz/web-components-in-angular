@@ -17,6 +17,7 @@ class WCBlock extends ExtendedWC {
       's-height',
       's-border-radius',
       's-font-size',
+      's-font-weight',
     ];
   }
 
