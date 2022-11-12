@@ -1,0 +1,23 @@
+<wc-block s-justify-content="center" s-background-color="var(--black)">
+  <wc-block s-width="var(--defaultWidth)" s-height="58px">
+    <wc-block
+      s-height="34px"
+      s-width="160px"
+      s-background-color="var(--yellow)"
+      s-justify-content="center"
+      s-border-radius="2px"
+      s-font-size="1.6rem"
+    >
+      sahibinden.com
+    </wc-block>
+    <wc-search-input
+      [attr.options]="tempOptions | json"
+      (search-input)="onSearchChange($event)"
+    ></wc-search-input>
+    <wc-block s-width="400px">
+      <wc-a s-font-size="2rem">Giriş Yap</wc-a>
+      <wc-a s-font-size="2rem">Hesap Aç</wc-a>
+      <wc-button s-background-color="var(--blue)">Ücretsiz* İlan Ver</wc-button>
+    </wc-block>
+  </wc-block>
+</wc-block>
