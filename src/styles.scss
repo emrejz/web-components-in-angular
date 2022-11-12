@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./reset.scss";
+:root {
+  //widths
+  --defaultWidth: 1115px;
+
+  //colors
+  --yellow: #ffea00;
+  --blue: #489af1;
+  --blue-dark: #00339f;
+  --black: #3f475f;
+  --black-dark: #2f3546;
+  --gray: #979aa2;
+  --gray-light: #ebebeb;
+}
+html {
+  font-size: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
