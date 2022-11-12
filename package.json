@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "npm run build && mv dist/web-components-in-angular/index.html dist/web-components-in-angular/200.html && surge  dist/web-components-in-angular web-components-with-angular-shbndn.surge.sh"
+
   },
   "private": true,
   "dependencies": {
